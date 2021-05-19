@@ -3,7 +3,7 @@ def mezclador(string_a, string_b):
     print("son strings")
     if len(string_a)>2 and len(string_b)>2:
         print("son strings y mayores de 2")
-        resultado=string_a[0:2] + string_b[0:2]
+        resultado=string_a[0:2] + string_b[-2:len(string_b)]
         return resultado
     else:
         print("son strings pero menos que 2")
@@ -17,7 +17,7 @@ def mezclador(string_a, string_b):
             if len(string_a)>2 and len(string_b)>2:
                 cond2=True
         print("son strings y mayores de 2")
-        resultado=string_a[0:2] + string_b[0:2]
+        resultado=string_a[0:2] + string_b[-2:len(string_b)]
         return resultado
  else:
     print("no son strings")
@@ -31,7 +31,7 @@ def mezclador(string_a, string_b):
         if len(string_a)>2 and len(string_b)>2:
             cond2=True
     print("son strings y mayores de 2")
-    resultado=string_a[0:2] + string_b[0:2]
+    resultado=string_a[0:2] + string_b[-2:len(string_b)]
     return resultado
   
 mezclador("penas","q")
