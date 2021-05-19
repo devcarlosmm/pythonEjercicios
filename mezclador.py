@@ -1,3 +1,7 @@
+'''
+Escribe una función que reciba dos strings (de largo > 2) como parámetros, y retorne un string de largo 4 que consista de las dos primeras letras del primer string 
+y las últimas dos letras del segundo.
+'''
 def mezclador(string_a, string_b):
  if type(string_a) == str and type(string_b) == str:
     print("son strings")
