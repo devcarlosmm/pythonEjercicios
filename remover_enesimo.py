@@ -1,3 +1,9 @@
+'''
+Escriba una función que reciba un string s y un número n como parámetros y retorne el mismo string s pero sin el elemento en el índice n.
+
+Por ejemplo, si s es "Hasta luego" y n es 3, entonces tu función debe retornar "Hasa luego".
+'''
+
 s="hasta luego"
 n=3
 def remover_enesimo(s, n):
