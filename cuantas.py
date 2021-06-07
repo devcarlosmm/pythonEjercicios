@@ -12,29 +12,26 @@ def promedio_std(lista):
 
 
 #dos
-def cuantas(conjunto):
-    i=0
-    contadorAzul=0
-    contadorRojo=0
-    contadorVerde=0
-    contadorAmarillo=0
-    for i in range(len(conjunto)):
-        if conjunto[i] == "azul":
-            contadorAzul=contadorAzul + 1
-        elif conjunto[i] == "rojo":
-            contadorRojo+=1
-        elif conjunto[i] == "verde":
-            contadorVerde+=1
-        elif conjunto[i] == "amarillo":
-            contadorAmarillo+=1
-    contadores=[[contadorAzul,"Azul"],[contadorRojo, "Rojo"],[contadorVerde, "Verde"],[contadorAmarillo, "Amarillo"]]
-    contadores.sort(reverse=True)
-    print(contadores)
-    mayor=contadores[0]
-    
-  
-conjunto = ['azul', 'rojo', 'rojo', 'azul', 'verde', 'verde']
-cuantas(conjunto)
+def obtener_color_frecuente(colores):
+    contador = {}
+    prioridad = ["azul","rojo","verde","amarillo"]
+    for color in colores:
+        if color in contador:
+            contador[color] += 1 
+        else:
+            contador[color] = 1 
+    m = max(contador.values()) 
+    print(contador)
+    color_seleccionado = [key for key, value in contador.items() if value == m] 
+    if len(color_seleccionado) > 1: 
+        color_seleccionado = min(color_seleccionado, key= lambda x: prioridad.index(x)) 
+    else:
+         color_seleccionado = color_seleccionado[0]
+    return color_seleccionado, m
+
+prioridad = ["azul","rojo","verde","amarillo"]
+colores = ['rojo', 'rojo', 'azul', 'azul','verde','amarillo']
+print(obtener_color_frecuente(colores))
 
 
 #tres
