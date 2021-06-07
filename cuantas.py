@@ -12,10 +12,10 @@ def promedio_std(lista):
 
 
 #dos
-def color_frecuente(colores):
+def color_frecuente(lista):
     contador = {}
     prioridad = ["azul","rojo","verde","amarillo"]
-    for color in colores:
+    for color in lista:
         if color in contador:
             contador[color] += 1 
         else:
@@ -31,7 +31,7 @@ def color_frecuente(colores):
 
 prioridad = ["azul","rojo","verde","amarillo"]
 colores = ['rojo', 'rojo', 'azul', 'azul','verde','amarillo']
-print(obtener_color_frecuente(colores))
+print(obtener_color_frecuente(lista))
 
 
 #tres
