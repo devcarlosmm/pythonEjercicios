@@ -6,9 +6,9 @@ def promedio_std(lista):
     total = 0.0
     for i in lista:
         total += round((i - x) ** 2,2)
-    y = total / (len(lista) -1)
+    y = total / (len(lista))
     y= round(y**(1/2),2)
-    return (x,y)
+    return x,y
 
 
 #dos
